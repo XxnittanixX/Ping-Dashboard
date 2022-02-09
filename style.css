@@ -58,9 +58,11 @@ header p {
     align-items: center;
     justify-content: center;
     gap: 20px;
+
+    position: relative;
 }
 
-.notify-content input {
+.email {
     width: 400px;
     height: 45px;
     padding-left: 30px;
@@ -72,7 +74,7 @@ header p {
     color: hsl(209, 33%, 12%);
 }
 
-.notify-content button {
+.submit {
     width: 150px;
     height: 45px;
     
@@ -86,9 +88,26 @@ header p {
     font-weight: bold;
 }
 
-.notify-content button:hover {
+.submit:hover {
     transform: translateY(-5px);
     box-shadow: -5px 15px 14px -1px hsl(0, 0%, 59%);
+}
+
+input:invalid {
+    border-color: hsl(354, 100%, 66%);
+}
+
+.email-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.invalid-email {
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 15px;
+    color: hsl(354, 100%, 66%);
 }
 
 main {

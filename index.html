@@ -22,11 +22,14 @@
 
     <p>Subscribe and get notified</p>
 
-    <div class="notify-content">
-      <input type="email" name="" id="" placeholder="Your email address...">
+    <form class="notify-content">
+      <div class="email-content">
+        <input class="email" id="email" type="email" placeholder="Your email address..." onblur="validarEmail()" onfocus="redefinirMsg()" autocomplete="off">
+        <span class="invalid-email" id="error"></span>
+      </div>
 
-      <button>Notify Me</button>
-    </div>
+      <input class="submit" type="submit">
+    </form>
   </header>
 
   <main>
@@ -44,6 +47,8 @@
 
     <p>&copy; Copyright Ping. All rights reserved.</p>
   </footer>
+
+  <script src="./index.js"></script>
 </body>
 
 </html>
